@@ -29,7 +29,7 @@
 
 -->
 
-### Intel® Boot Guard {#intel-boot-guard}
+## Intel® Boot Guard {#intel-boot-guard}
 
 **#BootGuard.1**: A full secure/verified boot flow MUST include Intel® Boot Guard, OEM Boot Block (OBB) Verification.
 

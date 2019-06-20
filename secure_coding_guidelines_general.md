@@ -132,7 +132,7 @@ Table 1.1 EDK II Deprecated APIs
 | UefiLib | GetVariable | GetVariable2 |
 |  | GetEfiGlobalVariable | GetEfiGlobalVariable2 |
 
-#### Race Condition {#race-condition}
+### Race Condition {#race-condition}
 
 **#RACECONDITION.1**: The code MUST be careful of Time-of-Check/Time-of-Use (TOC/TOU) attack for the data crossing a trusted region, such as flash region access, SMM communication buffer access. The right way is to copy the data from an untrusted region to a trusted region and only access the data in the trusted region.
 

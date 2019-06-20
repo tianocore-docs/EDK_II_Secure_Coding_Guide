@@ -39,3 +39,6 @@
   * [Intel® Boot Guard](secure_coding_guidelines_intel_platforms/intel_boot_guard.md)
   * [Intel® Bios Guard](secure_coding_guidelines_intel_platforms/intel_bios_guard.md)
 * [References](references.md)
+  * [Books and Papers ](references.md#books-and-papers)
+  * [Web ](references.md#web)
+  * [Firmware Specific ](references.md#firmware-specific)

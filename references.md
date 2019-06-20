@@ -31,7 +31,7 @@
 
 # References {#references}
 
-### Books and Papers {#books-and-papers}
+## Books and Papers {#books-and-papers}
 
 [McConnell] _Code Complete: A Practical Handbook of Software Construction, Second Edition_, Steve McConnell, Microsoft, 2004, ISBN: 978-0735619678
 
@@ -53,7 +53,7 @@
 
 [MITRE] System Engineering Guide, MITRE, Page 192, Security Code Review
 
-### Web {#web}
+## Web {#web}
 
 [Android] “Android Secure Coding Standard”, [https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard](https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard)
 
@@ -95,7 +95,7 @@
 
 [Witteman] “Secure Application Programming in the presence of Side Channel Attack”, Marc Witteman, [https://www.riscure.com/uploads/2018/11/201708_Riscure_Whitepaper_Side_Channel_Patterns.pdf](https://www.riscure.com/uploads/2018/11/201708_Riscure_Whitepaper_Side_Channel_Patterns.pdf)
 
-### Firmware Specific {#firmware-specific}
+## Firmware Specific {#firmware-specific}
 
 [CapsuleRecovery] Yao, Zimmer, [A Tour Beyond BIOS- Capsule Update and Recovery in EDK II](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf), [https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf)
 

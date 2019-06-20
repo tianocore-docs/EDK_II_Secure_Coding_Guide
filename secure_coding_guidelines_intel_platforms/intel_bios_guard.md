@@ -29,7 +29,7 @@
 
 -->
 
-### Intel® Bios Guard {#intel-bios-guard}
+## Intel® Bios Guard {#intel-bios-guard}
 
 **#BiosGuard.1**: Intel® Bios Guard SHOULD be used for a firmware update.
 
