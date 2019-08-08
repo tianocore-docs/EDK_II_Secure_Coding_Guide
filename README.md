@@ -91,7 +91,7 @@ Copyright (c) 2019, Intel Corporation. All rights reserved.
 | Revision | Revision History | Date |
 | ---------- | ------------------ | ----------- |
 | 01.0 | Initial release. | June 2019|
-|  |  |  |
+| 02.0 | Add  "Threat model for EDK II" as the appendix section |  Aug 2019 |
 
 
 <!--- end of README.md

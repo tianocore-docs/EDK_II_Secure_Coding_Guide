@@ -1,7 +1,7 @@
 {
   "variables" : {
     "title"   : "EDK II Secure Coding Guide",
-    "version" : "Revision 01.0"
+    "version" : "Revision 02.0"
   },
 
   "plugins": ["puml"],
