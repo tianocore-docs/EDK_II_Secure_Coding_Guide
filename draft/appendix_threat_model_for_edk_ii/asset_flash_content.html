@@ -1,0 +1,593 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Asset: Flash Content · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="asset_boot_flow.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    EDK II Security Coding Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../executive_summary.html">
+            
+                <a href="../executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../secure_coding_guidelines_general.html">
+            
+                <a href="../secure_coding_guidelines_general.html">
+            
+                    
+                    Secure Coding Guidelines: General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../secure_coding_guidelines_boot_firmware.html">
+            
+                <a href="../secure_coding_guidelines_boot_firmware.html">
+            
+                    
+                    Secure Coding Guidelines: Boot Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../secure_coding_guidelines_intel_platforms/">
+            
+                <a href="../secure_coding_guidelines_intel_platforms/">
+            
+                    
+                    Secure Coding Guidelines: Intel Platforms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../secure_coding_guidelines_intel_platforms/smm.html">
+            
+                <a href="../secure_coding_guidelines_intel_platforms/smm.html">
+            
+                    
+                    SMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                <a href="../secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                    
+                    Intel® Boot Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                <a href="../secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                    
+                    Intel® Bios Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Appendix - Threat Model for EDK II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="asset_flash_content.html">
+            
+                <a href="asset_flash_content.html">
+            
+                    
+                    Asset: Flash Content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="asset_boot_flow.html">
+            
+                <a href="asset_boot_flow.html">
+            
+                    
+                    Asset: Boot Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="asset_s3_resume.html">
+            
+                <a href="asset_s3_resume.html">
+            
+                    
+                    Asset: S3 Resume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="asset_management_mode.html">
+            
+                <a href="asset_management_mode.html">
+            
+                    
+                    Asset: Management Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="asset_build_tool.html">
+            
+                <a href="asset_build_tool.html">
+            
+                    
+                    Asset: Build Tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../references.html">
+            
+                <a href="../references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../references.html">
+            
+                <a href="../references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../references.html">
+            
+                <a href="../references.html#web">
+            
+                    
+                    Web 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../references.html">
+            
+                <a href="../references.html#firmware-specific">
+            
+                    
+                    Firmware Specific 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Asset: Flash Content</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  asset_flash_content.md for appendix_threat_model_for_edk_ii for EDK II Secure Coding Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="asset-flash-content">Asset: Flash Content </h2>
+<p>NIST <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-147.pdf" target="_blank">SP 800-147</a> and <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-147B.pdf" target="_blank">SP 800-147B</a> provide system firmware protection guidelines, including the detailed information on system firmware protection and update. NIST <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-193.pdf" target="_blank">SP 800-193</a> provides platform firmware resiliency guidelines. It extends protection to 3 principles: protection, detection, and recovery. It also enlarges the scope from system firmware (BIOS) to all the firmware on the platform.</p>
+<p>The flash content here includes both firmware code (such as PEI, DXE, SMM etc) and firmware data (such as UEFI variables, Microcode, etc).</p>
+<table>
+<thead>
+<tr>
+<th>Threat</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>If the firmware is not protected or locked, the attacker might modify the firmware directly.<br>If the firmware update process is not authenticated, the attacker might send a malicious firmware update image for update.</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>If the system software stores the secret in the firmware, the attacker may read the firmware content and get the secret.</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>If the attacker can modify the firmware content (code or data) and cause the firmware crash, the system might no longer boot. It becomes a permanent denial of service.</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>If the attacker can modify the firmware content (code or data) and store a Trojan in firmware, the Trojan may hide itself and gain the higher privilege.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Adversary</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network Attacker</td>
+<td>If the network is enabled before SMM lock and flash lock, the attacker may send mal-formed network packets.</td>
+</tr>
+<tr>
+<td>Unprivileged Software Attacker</td>
+<td>The attacker may trigger a firmware update, or write the UEFI variable.</td>
+</tr>
+<tr>
+<td>System Software Attacker</td>
+<td>The attacker may access a silicon register to unlock the flash access register.<br>The attacker may create a race condition to break the flash write protection or flash update authentication.</td>
+</tr>
+<tr>
+<td>Simple Hardware Attacker</td>
+<td>The attacker may press the power button during flash update or recovery, or set a jumper to modify the system boot mode from normal boot to recovery or even manufacturing mode.<br>The attacker may attach PCI Leach to perform DMA attack during flash update or recovery.<br>The attacker may hijack the SPI bus to read or write to the chip data.</td>
+</tr>
+<tr>
+<td>Skilled Hardware Attacker</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Mitigation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protection</td>
+<td>For the code region, the flash write protection must always be applied. During the flash update, the new firmware image must be authenticated and the version must be checked to prevent a rollback attack. In order to mitigate Time-of-check/Time-of-use (TOC/TOU) attacks, the new image must be copied to a secure environment before the check. The DMA protection must be enabled during flash update.<br>For the data region, the UEFI authenticated variable write must happen in an isolated execution environment. The authenticated variable data must be authenticated and the rollback protection must be applied. Just as in code region protection, in order to mitigate TOC/TOU attack, new variable content must be copied to a secure environment before the check and DMA protection must be applied to this environment. In addition, the secret must not be saved to the firmware code or data region.</td>
+</tr>
+<tr>
+<td>Detection</td>
+<td>The detection happens in the next boot.<br>For the code region, the industry may have different solutions to make sure the initial boot code is unmodified, such as Project Cerberus, Intel&#xAE; Boot Guard, etc.<br>For the data region, the UEFI variable driver needs to detect if the variable region is modified without using UEFI variable services.</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>If something wrong is detected, the entity which detects the failure needs to start the recovery process, and the recovery data must be in a known good and secure configuration and be delivered from a trusted and always available source.</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Appendix - Threat Model for EDK II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="asset_boot_flow.html" class="navigation navigation-next " aria-label="Next page: Asset: Boot Flow">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Asset: Flash Content","level":"1.6.1","depth":2,"next":{"title":"Asset: Boot Flow","level":"1.6.2","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_boot_flow.md","ref":"appendix_threat_model_for_edk_ii/asset_boot_flow.md","articles":[]},"previous":{"title":"Appendix - Threat Model for EDK II","level":"1.6","depth":1,"path":"appendix_threat_model_for_edk_ii/README.md","ref":"appendix_threat_model_for_edk_ii/README.md","articles":[{"title":"Asset: Flash Content","level":"1.6.1","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_flash_content.md","ref":"appendix_threat_model_for_edk_ii/asset_flash_content.md","articles":[]},{"title":"Asset: Boot Flow","level":"1.6.2","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_boot_flow.md","ref":"appendix_threat_model_for_edk_ii/asset_boot_flow.md","articles":[]},{"title":"Asset: S3 Resume","level":"1.6.3","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_s3_resume.md","ref":"appendix_threat_model_for_edk_ii/asset_s3_resume.md","articles":[]},{"title":"Asset: Management Mode","level":"1.6.4","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_management_mode.md","ref":"appendix_threat_model_for_edk_ii/asset_management_mode.md","articles":[]},{"title":"Asset: Build Tool","level":"1.6.5","depth":2,"path":"appendix_threat_model_for_edk_ii/asset_build_tool.md","ref":"appendix_threat_model_for_edk_ii/asset_build_tool.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Coding Guide","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"appendix_threat_model_for_edk_ii/asset_flash_content.md","mtime":"2020-12-01T06:48:15.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:48:45.508Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

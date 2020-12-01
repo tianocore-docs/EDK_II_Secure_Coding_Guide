@@ -1,0 +1,564 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SMM · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="intel_boot_guard.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    EDK II Security Coding Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../executive_summary.html">
+            
+                <a href="../executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../secure_coding_guidelines_general.html">
+            
+                <a href="../secure_coding_guidelines_general.html">
+            
+                    
+                    Secure Coding Guidelines: General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../secure_coding_guidelines_boot_firmware.html">
+            
+                <a href="../secure_coding_guidelines_boot_firmware.html">
+            
+                    
+                    Secure Coding Guidelines: Boot Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Secure Coding Guidelines: Intel Platforms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="smm.html">
+            
+                <a href="smm.html">
+            
+                    
+                    SMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="intel_boot_guard.html">
+            
+                <a href="intel_boot_guard.html">
+            
+                    
+                    Intel® Boot Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="intel_bios_guard.html">
+            
+                <a href="intel_bios_guard.html">
+            
+                    
+                    Intel® Bios Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_threat_model_for_edk_ii/">
+            
+                <a href="../appendix_threat_model_for_edk_ii/">
+            
+                    
+                    Appendix - Threat Model for EDK II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                <a href="../appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                    
+                    Asset: Flash Content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                <a href="../appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                    
+                    Asset: Boot Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                <a href="../appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                    
+                    Asset: S3 Resume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                <a href="../appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                    
+                    Asset: Management Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                <a href="../appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                    
+                    Asset: Build Tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../references.html">
+            
+                <a href="../references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../references.html">
+            
+                <a href="../references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../references.html">
+            
+                <a href="../references.html#web">
+            
+                    
+                    Web 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../references.html">
+            
+                <a href="../references.html#firmware-specific">
+            
+                    
+                    Firmware Specific 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SMM</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  SMM.md for EDK II Secure Coding Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="smm">SMM </h2>
+<p><strong>#SMM.0:</strong> Applications and functions should use the least privilege that will get the job done. If DXE or Runtime can finish the work, don&#x2019;t use SMM.</p>
+<p><strong>#SMM.1</strong>: SMM module MUST lock SMM, at SmmReadyToLock.</p>
+<ul>
+<li><strong>#SMM.1.1</strong>: Boot firmware MUST set SMRAM Range Register (SMRR) for Top Segment (TSEG) correctly at SmmReadyToLock for all processors.</li>
+<li><strong>#SMM.1.2</strong>: Boot firmware MUST use TSEG only and MUST NOT use A/B Segment (ABSEG) as SMRAM.</li>
+<li><strong>#SMM.1.3</strong>: Boot firmware MUST remove SMRAMC_D_OPEN at SmmReadyToLock.</li>
+<li><strong>#SMM.1.4</strong>: Boot firmware MUST set SMRAMC_D_LOCK at SmmReadyToLock.</li>
+<li><strong>#SMM.1.5</strong>: Boot firmware MUST close all unnecessary services at SmmReadyToLock, such as the capability to register a new SMM driver into SMRAM.</li>
+<li><strong>#SMM.1.6</strong>: All the above locks MUST be performed in the S3 resume path before the control is transferred to OS waking vector.</li>
+</ul>
+<p><strong>#SMM.2</strong>: SMM module MUST NOT call any code outside of SMRAM, after SmmReadyToLock. (SMMProtection)</p>
+<ul>
+<li><strong>#SMM.2.1</strong>: Boot firmware MUST make sure there is an SMM code call outside of SMRAM after SmmReadyToLock.</li>
+<li><strong>#SMM.2.2</strong>: UEFI/PI Boot firmware MUST make sure there is NOT boot services or UEFI protocols are called from SMM code after SmmReadyToLock.</li>
+<li><strong>#SMM.2.3</strong>: UEFI/PI Boot firmware MUST make sure there is NOT runtime services are called from SMM code after SmmReadyToLock.</li>
+<li><strong>#SMM.2.4</strong>: UEFI/PI Boot firmware MUST make sure there are NOT dynamic PCDs that are accessed from SMM code after SmmReadyToLock.</li>
+<li><strong>#SMM.2.5</strong>: UEFI/PI Boot firmware MUST choose the library or MACRO correctly to make sure these libraries or MACROs do not call outside of SMRAM after SmmReadyToLock.</li>
+<li><strong>#SMM.2.6</strong>: All the above restrictions MUST be performed in the S3 resume path.</li>
+<li><strong>#SMM.2.7</strong>: Boot firmware MUST enable ExecutionDisable (XD) feature provided by Intel CPU.</li>
+<li><strong>#SMM.2.8</strong>: If the hardware supports SMM_Code_Access_Chk Model Specific Register (MSR), boot firmware MUST enable SMM_CODE_ACCESS for all processors.</li>
+</ul>
+<p><strong>#SMM.3</strong>: SMM module MUST check any communication memory between SMM and non-SMM, to make sure it does not impact the integrity, confidentiality or availability of SMM. (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Secure_SMM_Communication.pdf" target="_blank">SmmComm</a>)</p>
+<ul>
+<li><strong>#SMM.3.1</strong>: Boot firmware SMM module MUST check any data from a non-SMM component, to make sure the data buffer is NOT overlapped with SMRAM.</li>
+<li><strong>#SMM.3.2</strong>: If the data buffer contains a pointer, the Boot firmware SMM module MUST check the pointer to make sure the buffer pointed is NOT overlapped with SMRAM.</li>
+<li><strong>#SMM.3.3</strong>: If the data buffer is from MMIO BAR, the Boot firmware SMM module MUST check the pointer to make sure the buffer pointed is NOT overlapped with SMRAM.</li>
+<li><strong>#SMM.3.4</strong>: Boot firmware SMM module MUST calculate the data buffer carefully to avoid integer overflow.</li>
+<li><strong>#SMM.3.5</strong>: Boot firmware SMM module MUST copy the communication buffer to SMRAM before the check, to resist TOC/TOU or DMA attacks.</li>
+</ul>
+<p><strong>#SMM.4</strong>: SMM module MUST check any communication memory between SMM and non-SMM, to make sure it does not impact the integrity, confidentiality or availability of VMM. (SmmComm)</p>
+<ul>
+<li><strong>#SMM.4.1</strong>: Boot firmware SMM module MUST check any data from a non-SMM component, to make sure the data buffer is a fixed communication buffer range. &#x201C;Fixed&#x201D; here means a buffer used for Boot firmware SMM only, such as ReservedMemory, ACPINvs, or UefiRuntimeServicesData.</li>
+<li><strong>#SMM.4.2</strong>: If the data buffer contains a pointer, the Boot firmware SMM module MUST check the pointer to make sure the buffer pointed is in a fixed communication buffer range.</li>
+<li><strong>#SMM.4.3</strong>: If the data buffer is from MMIO BAR, the Boot firmware SMM module MUST check the pointer to make sure the buffer pointed is in MMIO range.</li>
+<li><strong>#SMM.4.4</strong>: Boot firmware SMM module MUST calculate the data buffer carefully to avoid integer overflow.</li>
+<li><strong>#SMM.4.5</strong>: Boot firmware SMM module MUST set the DRAM region to be not-present other than SMRAM and the fixed communication buffer range.</li>
+</ul>
+<p><strong>#SMM.5</strong>: SMM module MUST check MMIO access, to make sure it does not impact any bits which can only be accessed in SMM, or which only need to be accessed in VMM. Such as Intel Virtualization Technology for Direct I/O (VTd) BAR or Serial Peripheral Interface (SPI) BAR.</p>
+<ul>
+<li><strong>#SMM.5.1</strong>: If the data buffer is from MMIO BAR, Boot firmware SMM module MAY check if the BAR is the same as the original value in preboot, and deny the access if the BAR is changed.</li>
+</ul>
+<p><strong>#SMM.6</strong>: SMM module MUST be built with 4K alignment so that the SMM image can be protected with section attributes by SMM. (MemoryProtection)</p>
+<ul>
+<li><strong>#SMM.6.1</strong>: SMM module MUST be built with 4K alignment.</li>
+<li><strong>#SMM.6.2</strong>: The code section of the SMM image MUST be set as read-only in the page table.</li>
+<li><strong>#SMM.6.3</strong>: The data section of the SMM image MUST be set as non-executable in the page table.</li>
+<li><strong>#SMM.6.4</strong>: The SMM entrypoint code MUST be read-only.</li>
+<li><strong>#SMM.6.5</strong>: The platform MUST configure SMM with a static page table.</li>
+<li><strong>#SMM.6.6</strong>: The page table itself MUST be Read-Only.</li>
+<li><strong>#SMM.6.7</strong>: The Global Descriptor Table (GDT), Interrupt Description Table (IDT) MUST be Read-Only. (The only exception is IA32 GDT with stack guard enabled because stack switch need task switch)</li>
+<li><strong>#SMM.6.8</strong>: All other SMRAM data must be non-executable. (Stack, Heap)</li>
+</ul>
+<p><strong>#SMM.7</strong>: A platform MUST remove any unnecessary System Management Interrupt (SMI) handlers. (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_Profiling_in_EDK_II.pdf" target="_blank">Profile</a>)</p>
+<ul>
+<li><strong>#SMM.7.1</strong>: A platform MAY enable SMI handler profile feature to check all SMI handlers.</li>
+</ul>
+<p><strong>#SMM.8</strong>: An SMM module SHOULD use a read-only page to save the critical data structure. As such this critical data structure is locked after SmmReadyToLock.</p>
+<p><strong>#SMM.10</strong>: An SMM module MUST use a read-only page for any S3 data, that needs to be referred before SMM rebase in the S3 resume phase.</p>
+<p><strong>#SMM.11:</strong> If Control Flow Enhancement Technology (CET) is supported, the SMM MUST enable CET to prevent ROP attack. (<a href="https://github.com/tianocore/tianocore.github.io/wiki/CET-in-SMM" target="_blank">CET EDK II</a>)</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Secure Coding Guidelines: Intel Platforms">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="intel_boot_guard.html" class="navigation navigation-next " aria-label="Next page: Intel® Boot Guard">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SMM","level":"1.5.1","depth":2,"next":{"title":"Intel® Boot Guard","level":"1.5.2","depth":2,"path":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","ref":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","articles":[]},"previous":{"title":"Secure Coding Guidelines: Intel Platforms","level":"1.5","depth":1,"path":"secure_coding_guidelines_intel_platforms/README.md","ref":"secure_coding_guidelines_intel_platforms/README.md","articles":[{"title":"SMM","level":"1.5.1","depth":2,"path":"secure_coding_guidelines_intel_platforms/smm.md","ref":"secure_coding_guidelines_intel_platforms/smm.md","articles":[]},{"title":"Intel® Boot Guard","level":"1.5.2","depth":2,"path":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","ref":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","articles":[]},{"title":"Intel® Bios Guard","level":"1.5.3","depth":2,"path":"secure_coding_guidelines_intel_platforms/intel_bios_guard.md","ref":"secure_coding_guidelines_intel_platforms/intel_bios_guard.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Coding Guide","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"secure_coding_guidelines_intel_platforms/smm.md","mtime":"2020-12-01T06:48:15.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:48:45.508Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

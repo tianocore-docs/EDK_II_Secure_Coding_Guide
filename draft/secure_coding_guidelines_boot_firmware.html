@@ -1,0 +1,591 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Secure Coding Guidelines: Boot Firmware · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="secure_coding_guidelines_intel_platforms/" />
+    
+    
+    <link rel="prev" href="secure_coding_guidelines_general.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    EDK II Security Coding Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="executive_summary.html">
+            
+                <a href="executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="secure_coding_guidelines_general.html">
+            
+                <a href="secure_coding_guidelines_general.html">
+            
+                    
+                    Secure Coding Guidelines: General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="secure_coding_guidelines_boot_firmware.html">
+            
+                <a href="secure_coding_guidelines_boot_firmware.html">
+            
+                    
+                    Secure Coding Guidelines: Boot Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="secure_coding_guidelines_intel_platforms/">
+            
+                <a href="secure_coding_guidelines_intel_platforms/">
+            
+                    
+                    Secure Coding Guidelines: Intel Platforms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="secure_coding_guidelines_intel_platforms/smm.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/smm.html">
+            
+                    
+                    SMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                    
+                    Intel® Boot Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                    
+                    Intel® Bios Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix_threat_model_for_edk_ii/">
+            
+                <a href="appendix_threat_model_for_edk_ii/">
+            
+                    
+                    Appendix - Threat Model for EDK II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                    
+                    Asset: Flash Content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                    
+                    Asset: Boot Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                    
+                    Asset: S3 Resume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                    
+                    Asset: Management Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                    
+                    Asset: Build Tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="references.html">
+            
+                <a href="references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="references.html">
+            
+                <a href="references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="references.html">
+            
+                <a href="references.html#web">
+            
+                    
+                    Web 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="references.html">
+            
+                <a href="references.html#firmware-specific">
+            
+                    
+                    Firmware Specific 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Secure Coding Guidelines: Boot Firmware</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  secure-coding-guidelines-boot-firmware.md for EDK II Secure Coding Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="secure-coding-guidelines-boot-firmware">Secure Coding Guidelines: Boot Firmware </h1>
+<h3 id="flash">Flash </h3>
+<p><strong>#FLASH.1</strong>: The platform MUST lock flash part no later than EndOfDxe.</p>
+<p><strong>#FLASH.2</strong>: The flash lock MUST happen in all boot mode (normal, S3, S4, capsule update, recovery, etc).</p>
+<h3 id="flash-update">Flash Update </h3>
+<p><strong>#FLASH.UPDATE.1</strong>: Firmware Flash Update MUST check the integrity of a new Firmware image. (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf" target="_blank">CapsuleRecovery</a>)</p>
+<p><strong>#FLASH.UPDATE.2</strong>: Firmware Flash Update MUST check the version of a new Firmware image.</p>
+<p><strong>#FLASH.UPDATE.3</strong>: The verification process MUST happen in the trusted execution environment.</p>
+<p><strong>#FLASH.UPDATE.4</strong>: The new Firmware MUST exist in a trusted region when the verification performs.</p>
+<p><strong>#FLASH.UPDATE.5</strong>: The verification and update MUST happen in the same trusted execution environment and with no interruption.</p>
+<p><strong>#FLASH.UPDATE.6</strong>: System Firmware Update requests MUST be handled before EndOfDxe.</p>
+<p><strong>#FLASH.UPDATE.7</strong>: Device Firmware Update requests MAY be handled after EndOfDxe.</p>
+<h3 id="recovery">Recovery </h3>
+<p><strong>#FLASH.RECOVERY.1</strong>: Firmware recovery MUST check the integrity of a Firmware recovery image if it is from an external source. (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf" target="_blank">CapsuleRecovery</a>)</p>
+<p><strong>#FLASH.RECOVERY.2</strong>: Firmware recovery MUST check the version of a Firmware recovery image if it is from an external source.</p>
+<h3 id="variable">Variable </h3>
+<p><strong>#VARIABLE.1</strong>: A platform MUST lock the variable before EndOfDxe if it is critical, such as memory configuration, TPM Physical Presence (PP) flag. NOTE: This locked variable can still be updated in SMM. (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_UEFI_Authenticated_Variables_in_SMM_with_EDKII_V2.pdf" target="_blank">Variable</a>)</p>
+<p><strong>#VARIABLE.2</strong>: A platform MUST use the same lock policy in a normal boot and S4.</p>
+<p><strong>#VARIABLE.3</strong>: A platform MAY define the variable property (attribute, max size, min size). This variable property can be a list defined by the platform.</p>
+<p><strong>#VARIABLE.4</strong>: The return status for variable access MUST be verified.</p>
+<p><strong>#VARIABLE.SET.1</strong>: A platform MUST use error handling on variable set if the variable NOT locked, such as OUT_OF_RESOURCE, or attribute mismatch.</p>
+<p><strong>#VARIABLE.SET.2</strong>: A platform MUST provide a way to handle variable out of resource. Such as clean unknown variable.</p>
+<p><strong>#VARIABLE.GET.1</strong>: A platform MUST use error handling variable get if the variable is NOT locked. Such as NOT_FOUND, or unexpected value.</p>
+<p><strong>#VARIABLE.GET.2</strong>: A platform MUST not assume to get the correct variable content/size if the variable is NOT locked.</p>
+<p><strong>#VARIABLE.ATTRIB.1</strong>: A platform MUST NOT set variable RT attribute unless it is needed.</p>
+<p><strong>#VARIABLE.ATTRIB.2</strong>: A platform MUST NOT set variable NV attribute unless it is needed.</p>
+<p><strong>#VARIABLE.CHECK.1</strong>: A platform MUST enable Human Interface Infrastructure (HII) variable check.</p>
+<p><strong>#VARIABLE.CHECK.2</strong>: A platform MUST enable Platform Configuration Database (PCD) variable check.</p>
+<p><strong>#VARIABLE.CHECK.3</strong>: A platform MUST enable UEFI variable check.</p>
+<p><strong>#VARIABLE.QUOTA.1</strong>: A platform MUST define a reasonable variable quota.</p>
+<p><strong>#VARIABLE.CONFIDENTIALITY.1</strong>: Current variable driver does not provide confidentiality support. If the variable confidentiality is needed, the caller MUST encrypt it and decrypt it.</p>
+<p><strong>#VARIABLE.CONFIDENTIALITY.2</strong>: The encryption and decryption MUST be in a secure execution environment, such as SMM.</p>
+<h3 id="s3">S3 </h3>
+<p><strong>#S3.1</strong>: S3 BootScript MUST be saved in a secure place (lockbox) (<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_S3_resume_with_EDKII_V2.pdf" target="_blank">S3Resume</a>)</p>
+<p><strong>#S3.2</strong>: S3 BootScript image dispatch and parameter MUST be saved in a secure place (lockbox).</p>
+<p><strong>#S3.3</strong>: S3 CPU data MUST be saved in a secure place (SMM).</p>
+<p><strong>#S3.4</strong>: S3 configuration data (memory, chipset) MUST be saved in a secure place (ReadOnly variable, SMM).</p>
+<h3 id="secure-boot">Secure Boot </h3>
+<p><strong>#SECUREBOOT.1</strong>: Platform MUST NOT provide a way to disable secure boot without authentication.</p>
+<p><strong>#SECUREBOOT.2</strong>: Platform MUST verify all images in the secure boot path. The bypass of any image verification is NOT ALLOWED.</p>
+<p><strong>#SECUREBOOT.3</strong>: If a firmware update is supported, the new firmware image must be signed.</p>
+<p><strong>#SECUREBOOT.4</strong>: If a firmware recovery is supported, the recovery firmware image must be signed. The recovery firmware image is from an external source.</p>
+<p><strong>#SECUREBOOT.5</strong>: The verification MUST happen in all boot path (normal, S3, S4, capsule update, recovery, etc).</p>
+<p><strong>#SECUREBOOT.UEFI.1</strong>: UEFI secure boot MUST be used to verify the 3<sup>rd</sup> part image, such as PCI Option ROM, or OS loader.</p>
+<p><strong>#SECUREBOOT.UEFI.2</strong>: If UEFI secure boot is used, any 3<sup>rd</sup> part image MUST be verified.</p>
+<p><strong>#SECUREBOOT.UEFI.3</strong>: If UEFI secure boot is used, a platform MUST implement the PlatformSecureLib to provide a secure platform-specific method to detect a physically present user.</p>
+<p><strong>#SECUREBOOT.Key.1</strong>: If signing verification is required, the public key or hash MUST be stored in hardware, or boot block or UEFI authenticated variable.</p>
+<h3 id="tcg">TCG </h3>
+<p><strong>#TCG.1</strong>: If TCG trusted boot is enabled, a platform MUST do measurement following the TCG specification. (<a href="https://firmware.intel.com/sites/default/files/resources/A_Tour_Beyond_BIOS_Implementing_TPM2_Support_in_EDKII.pdf" target="_blank">TPM2 EDK II</a>)</p>
+<p><strong>#TCG.2</strong>: All parent Firmware Volumes (FV) MUST be reported and measured. The child FV MAY NOT be measured.</p>
+<p><strong>#TCG.3</strong>: If an image is not in a FV, it MUST be measured. The image inside of a FV MAY NOT be measured.</p>
+<p><strong>#TCG.4</strong>: Any FV MUST be measured, including external FV from firmware update capsule, or recovery.</p>
+<p><strong>#TCG.5</strong>: The platform MUST link Tcg2MeasurementLib to be the last NULL instance for SecurityStub.</p>
+<p><strong>#TCG.SMBIOS.1</strong>: The platform MUST make sure the measured SMBIOS record is the same cross boot. (If the record might be different, it MUST NOT be measured)</p>
+<p><strong>#TCG.MOR.1</strong>: Memory Override (MOR) request MUST be handled by the platform/Memory Reference Code (MRC).</p>
+<p><strong>#TCG.MOR.2</strong>: Storage MOR request MUST be handled by platform BDS before EndOfDxe.</p>
+<p><strong>#TCG.MOR.3</strong>: If the MOR variable is not got, the platform MUST treat it as MOR requested.</p>
+<p><strong>#TCG.MOR.4</strong>: Secure MOR MUST be used for the platform. (<a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/device-guard-requirements" target="_blank">SecureMOR</a>)</p>
+<p><strong>#TCG.PP.1</strong>: TCG TPM Physical Presence (PP) request MUST be handled before EndOfDxe.</p>
+<p><strong>#TCG.PP.2</strong>: TCG storage PP request MUST be handled before EndOfDxe.</p>
+<p><strong>#TCG.PP.3</strong>: TCG TPM PP flag MUST be locked in normal boot and S4.</p>
+<p><strong>#TCG.PP.4</strong>: TCG storage PP flag MUST be locked in normal boot and S4.</p>
+<p><strong>#TCG.TPM.1.</strong> A Platform MUST generate random TPM2 PlatformAuth and discard it in normal boot.</p>
+<p><strong>#TCG.TPM.2</strong>: A Platform MUST generate random TPM2 PlatformAuth and discard it in S3 if device error in S3.</p>
+<p><strong>#TCG.TPM.3</strong>: A platform MAY disable TPM if the TPM device returns an error.</p>
+<p><strong>#TCG.TPM.4</strong>: A platform MUST handle TPM device error in both normal boot and S3.</p>
+<p><strong>#TCG.TPM.5</strong>: If S3 Startup(STATE) fails, the platform MUST send Startup(Clear) and extend error code to PCRs.</p>
+<h3 id="option-rom">Option ROM </h3>
+<p><strong>#OROM.1</strong>: Any 3<sup>rd</sup> party option ROM MUST NOT be dispatched before EndOfDxe. The 3<sup>rd</sup> party option ROM means a PCI option ROM on the 3<sup>rd</sup> party PCI card. If a PCI option ROM is integrated inside of the firmware, it is NOT considered as a 3<sup>rd</sup> party option ROM and it MAY be dispatched before EndOfDxe.</p>
+<p><strong>#OROM.2</strong>: Platform BDS MUST handle the deferred PCI option ROM after EndOfDxe.</p>
+<h3 id="console">Console </h3>
+<p><strong>#CONSOLE.1</strong>: A trusted console SHOULD be available before EndOfDxe, based upon the need. A trusted console means: 1) Integrated device such as a PS2/USB keyboard/mouse without any option ROM, 2) A chipset-integrated video card which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI option ROM, 3) A 3<sup>rd</sup> party video card which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI Option ROM.</p>
+<p><strong>#CONSOLE.2</strong>: The trusted console MAY support features, such as TCG Physical Presence, hard drive Password or TCG OPAL password.</p>
+<p><strong>#CONSOLE.3</strong>: If a remote console is used, additional authentication MAY be used, such as user password.</p>
+<h3 id="storage">Storage </h3>
+<p><strong>#STORAGE.1</strong>: A platform MUST connect trusted storage device before EndOfDxe, based upon the need. A trusted storage means:</p>
+<ol>
+<li>Integrated device, such as a Universal Serial Bus (USB), Advanced Technology Attachment (ATA), AT Attachment Packet Interface (ATAPI), Non-Volatile Memory express (NVMe), Universal Flash Storage  (UFS), Embedded MultiMedia Card (eMMC), Secure Digital (SD) Card, without any option ROM,</li>
+<li>A chipset-integrated storage card, such as Redundant Arrays of Independent Drives (RAID), which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI Option ROM,</li>
+<li>A 3rd party storage card, such as Small Computer System Interface (SCSI), Fiber Channel (FC), which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI Option ROM.</li>
+</ol>
+<p><strong>#STORAGE.2</strong>: A platform MUST send TPer Reset to storage device if there is a MOR request.</p>
+<p><strong>#STORAGE.3</strong>: A platform MUST let user input hard drive password or TCG OPAL password to unlock the hard drive if the hard drive is locked.</p>
+<p><strong>#STORAGE.4</strong>: A platform MUST disable the DMA on the storage if it is not a boot device. (Disconnect Device)</p>
+<h3 id="silicon">Silicon </h3>
+<p><strong>#SILICON.1</strong>: The lockable silicon register MUST be locked before EndOfDxe, include SMRAM, Flash, Top Swap, Remap Bar, etc</p>
+<p><strong>#SILICON.2</strong>: The lockable silicon register MUST be locked in all booth path including S3, S4, Capsule, Recovery, etc.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="secure_coding_guidelines_general.html" class="navigation navigation-prev " aria-label="Previous page: Secure Coding Guidelines: General">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="secure_coding_guidelines_intel_platforms/" class="navigation navigation-next " aria-label="Next page: Secure Coding Guidelines: Intel Platforms">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Secure Coding Guidelines: Boot Firmware","level":"1.4","depth":1,"next":{"title":"Secure Coding Guidelines: Intel Platforms","level":"1.5","depth":1,"path":"secure_coding_guidelines_intel_platforms/README.md","ref":"secure_coding_guidelines_intel_platforms/README.md","articles":[{"title":"SMM","level":"1.5.1","depth":2,"path":"secure_coding_guidelines_intel_platforms/smm.md","ref":"secure_coding_guidelines_intel_platforms/smm.md","articles":[]},{"title":"Intel® Boot Guard","level":"1.5.2","depth":2,"path":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","ref":"secure_coding_guidelines_intel_platforms/intel_boot_guard.md","articles":[]},{"title":"Intel® Bios Guard","level":"1.5.3","depth":2,"path":"secure_coding_guidelines_intel_platforms/intel_bios_guard.md","ref":"secure_coding_guidelines_intel_platforms/intel_bios_guard.md","articles":[]}]},"previous":{"title":"Secure Coding Guidelines: General","level":"1.3","depth":1,"path":"secure_coding_guidelines_general.md","ref":"secure_coding_guidelines_general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Coding Guide","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"secure_coding_guidelines_boot_firmware.md","mtime":"2020-12-01T06:48:15.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:48:45.508Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

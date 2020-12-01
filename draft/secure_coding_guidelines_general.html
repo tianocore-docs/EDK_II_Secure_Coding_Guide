@@ -1,0 +1,721 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Secure Coding Guidelines: General · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="secure_coding_guidelines_boot_firmware.html" />
+    
+    
+    <link rel="prev" href="executive_summary.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    EDK II Security Coding Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="executive_summary.html">
+            
+                <a href="executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="secure_coding_guidelines_general.html">
+            
+                <a href="secure_coding_guidelines_general.html">
+            
+                    
+                    Secure Coding Guidelines: General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="secure_coding_guidelines_boot_firmware.html">
+            
+                <a href="secure_coding_guidelines_boot_firmware.html">
+            
+                    
+                    Secure Coding Guidelines: Boot Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="secure_coding_guidelines_intel_platforms/">
+            
+                <a href="secure_coding_guidelines_intel_platforms/">
+            
+                    
+                    Secure Coding Guidelines: Intel Platforms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="secure_coding_guidelines_intel_platforms/smm.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/smm.html">
+            
+                    
+                    SMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/intel_boot_guard.html">
+            
+                    
+                    Intel® Boot Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                <a href="secure_coding_guidelines_intel_platforms/intel_bios_guard.html">
+            
+                    
+                    Intel® Bios Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix_threat_model_for_edk_ii/">
+            
+                <a href="appendix_threat_model_for_edk_ii/">
+            
+                    
+                    Appendix - Threat Model for EDK II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_flash_content.html">
+            
+                    
+                    Asset: Flash Content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_boot_flow.html">
+            
+                    
+                    Asset: Boot Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_s3_resume.html">
+            
+                    
+                    Asset: S3 Resume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_management_mode.html">
+            
+                    
+                    Asset: Management Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                <a href="appendix_threat_model_for_edk_ii/asset_build_tool.html">
+            
+                    
+                    Asset: Build Tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="references.html">
+            
+                <a href="references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="references.html">
+            
+                <a href="references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="references.html">
+            
+                <a href="references.html#web">
+            
+                    
+                    Web 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="references.html">
+            
+                <a href="references.html#firmware-specific">
+            
+                    
+                    Firmware Specific 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Secure Coding Guidelines: General</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  secure-coding-guidelines-general.md for EDK II Secure Coding Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="secure-coding-guidelines-general">Secure Coding Guidelines: General </h1>
+<p>Guidelines general</p>
+<h3 id="general">General </h3>
+<p><strong>#GENERAL.1</strong>: The code in trusted region MUST check any date from an untrusted region, such as a Portable and Executable (PE) image, capsule image, System Management Mode (SMM) communication buffer, Memory Mapped Input/Output (MMIO) Base Address Register (BAR), etc.</p>
+<p><strong>#GENERAL.2</strong>: When a code processes the untrusted data, it MUST avoid buffer overflows. Please do not access (write or read) the buffer beyond the size field.</p>
+<p><strong>#GENERAL.3</strong>: When code processes the untrusted data, it MUST avoid integer overflow. Please use addition instead of subtraction, use division instead of multiplication.</p>
+<p><strong>#GENERAL.4</strong>: When code processes the untrusted data, it MUST avoid untrusted data overlap with the trusted region.</p>
+<p><strong>#GENERAL.5</strong>: When code processes the untrusted data, it MUST check the untrusted data in all possible paths.</p>
+<p><strong>#GENERAL.INPUT.1</strong>: The code MUST check for valid input and reject everything else</p>
+<p><strong>#GENERAL.INPUT.2</strong>: The code MUST perform sanity checks and bounds checks, such as check type, length, range, format.</p>
+<p><strong>#GENERAL.INPUT.3</strong>: The code MUST use canonical representation. Always use fully qualified pathnames for files that get opened</p>
+<p><strong>#GENERAL.INPUT.4</strong>: The code MUST beware of character encoding and watch out for escape characters if using a shell script</p>
+<p><strong>#GENERAL.INPUT.5</strong>: The code MUST validate as much and as deep as possible to prevent unintentional errors if the code is changed; balance against coding time/performance.</p>
+<p><strong>#GENERAL.INPUT.6</strong>: The code MUST be careful of boundary conditions (e.g., off by one error, array indices) and conditionals (e.g., reverse logic)</p>
+<p><strong>#GENERAL.BUFFER.1</strong>: The code MUST check buffer sizes, copies, and indices (esp. sizeof)</p>
+<p><strong>#GENERAL.BUFFER.2</strong>: The code MUST check for appropriate buffer size. Maximums should be defined globally where possible to avoid assumptions in lower code layers.</p>
+<p><strong>#GENERAL.BUFFER.3</strong>: The code MUST check for NULL Pointers dereferenced in the code.</p>
+<p><strong>#GENERAL.BUFFER.4</strong>: The code MUST check NULL for NIL-terminate strings.</p>
+<p><strong>#GENERAL.ARITH.1</strong>: The code MUST check based on data type limitations (e.g., integer underflows and overflows).</p>
+<p><strong>#GENERAL.ARITH.2</strong>: The code MUST properly cast numeric variables involved in string manipulation.</p>
+<p><strong>#GENERAL.ARITH.3</strong>: The code SHOULD use SafeInt library to handle integer of external input.</p>
+<p><strong>#GENERAL.FAIL.1:</strong> Once the check fails, the code MUST fail secure &#x2013; fail closed.</p>
+<p><strong>#GENERAL.FAIL.2:</strong> Once the check fails, the code MUST not provide hints to hackers (e.g., by disclosing information on failure). Don&#x2019;t help an attacker with &#x2018;guiding&#x2019; error messages.</p>
+<h3 id="assert">ASSERT </h3>
+<p><strong>#ASSERT.1</strong>: ASSERT MUST be used for something that NEVER occurs. If something MIGHT occur, use ERROR HANDLING, please. Check function return values in a consumed API. (from Code Complete)</p>
+<p><strong>#ASSERT.Variable.1</strong>: GetVariable with Non-Volatile (NV)+Runtime (RT) without Authentication (AU)/ReadOnly(RO) attribute MUST NOT ASSERT(), or at least have error handling code followed by.</p>
+<p><strong>#ASSERT.Variable.2</strong>: SetVariable with NV attribute MUST NOT ASSERT(), or at least have error handling code followed by.</p>
+<p><strong>#ASSERT.Variable.3</strong>: GetVariable with AU/RO attribute MAY ASSERT(), if driver assumes variable must exist.</p>
+<p><strong>#ASSERT.Variable.4</strong>: SetVariable without NV attribute MAY ASSERT(), before EndOfDxe.</p>
+<p><strong>#ASSERT.Resource.1</strong>: Memory Allocation MUST NOT ASSERT() after EndOfDxe.</p>
+<p><strong>#ASSERT.Resource.2</strong>: Memory Allocation MAY ASSERT() before EndOfDxe, if the allocation failure prevents the system from booting. E.g. SEC/PEI phase, the error means configuration error or hardware error. If we need return, we might return to the CPU reset vector, which is meaningless.</p>
+<p><strong>#ASSERT.Resource.3</strong>: MMIO/IO Allocation for external devices MUST NOT use ASSERT().</p>
+<p><strong>#ASSERT.Resource.4</strong>: MMIO/IO Allocation for onboard devices MAY use ASSERT() before EndOfDxe.</p>
+<p><strong>#ASSERT.SMM.1</strong>: SMI handler MUST NOT use ASSERT for external input, after EndOfDxe.</p>
+<p><strong>#ASSERT.SMM.2</strong>: SMM driver MAY use ASSERT in the entrypoint to construct the environment.</p>
+<p><strong>#ASSERT.NETWORK.1</strong>: Network driver MUST NOT use ASSERT for the packet from the remote.</p>
+<p><strong>#ASSERT.SHELL.1</strong>: Shell MUST NOT use ASSERT for the resource request, or user input.</p>
+<h3 id="deprecated-api">Deprecated API </h3>
+<p><strong>#DEPRECATEDAPI.1</strong>: The code MUST not use any deprecated API.</p>
+<p>Table 1.1 EDK II Deprecated APIs</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Deprecated API</th>
+<th>Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseLib</td>
+<td>StrCpy</td>
+<td>StrCpyS</td>
+</tr>
+<tr>
+<td></td>
+<td>StrnCpy</td>
+<td>StrnCpys</td>
+</tr>
+<tr>
+<td></td>
+<td>StrCat</td>
+<td>StrCatS</td>
+</tr>
+<tr>
+<td></td>
+<td>StrnCat</td>
+<td>StrnCats</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiStrCpy</td>
+<td>AsciiStrCpyS</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiStrnCpy</td>
+<td>AsciiStrnCpys</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiStrCat</td>
+<td>AsciiStrCatS</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiStrnCat</td>
+<td>AsciiStrnCats</td>
+</tr>
+<tr>
+<td></td>
+<td>UnicodeStrToAsciiStr</td>
+<td>UnicodeStrToAsciiStrS</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiStrToUnicodeStr</td>
+<td>AsciiStrToUnicodeStrS</td>
+</tr>
+<tr>
+<td>PcdLib</td>
+<td>[Lib]PcdSet[Ex]8</td>
+<td>[Lib]PcdSet[Ex]8S</td>
+</tr>
+<tr>
+<td></td>
+<td>[Lib]PcdSet[Ex]16</td>
+<td>[Lib]PcdSet[Ex]16S</td>
+</tr>
+<tr>
+<td></td>
+<td>[Lib]PcdSet[Ex]32</td>
+<td>[Lib]PcdSet[Ex]32S</td>
+</tr>
+<tr>
+<td></td>
+<td>[Lib]PcdSet[Ex]64</td>
+<td>[Lib]PcdSet[Ex]64S</td>
+</tr>
+<tr>
+<td></td>
+<td>[Lib]PcdSet[Ex]Ptr</td>
+<td>[Lib]PcdSet[Ex]PtrS</td>
+</tr>
+<tr>
+<td></td>
+<td>[Lib]PcdSet[Ex]Bool</td>
+<td>[Lib]PcdSet[Ex]BoolS</td>
+</tr>
+<tr>
+<td>PrintLib</td>
+<td>UnicodeValueToString</td>
+<td>UnicodeValueToStringS</td>
+</tr>
+<tr>
+<td></td>
+<td>AsciiValueToString</td>
+<td>AsciiValueToStringS</td>
+</tr>
+<tr>
+<td>UefiLib</td>
+<td>GetVariable</td>
+<td>GetVariable2</td>
+</tr>
+<tr>
+<td></td>
+<td>GetEfiGlobalVariable</td>
+<td>GetEfiGlobalVariable2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="race-condition">Race Condition </h3>
+<p><strong>#RACECONDITION.1</strong>: The code MUST be careful of Time-of-Check/Time-of-Use (TOC/TOU) attack for the data crossing a trusted region, such as flash region access, SMM communication buffer access. The right way is to copy the data from an untrusted region to a trusted region and only access the data in the trusted region.</p>
+<p><strong>#RACECONDITION.2</strong>: The code MUST be careful of race conditions for the Bootstrap Processor (BSP) and Application Processors (AP). The BSP and AP may run different code in different trusted regions. Identify and Keep security critical sections short and simple.</p>
+<p><strong>Policy</strong></p>
+<p><strong>#POLICY.BLAKLIST.1:</strong> If a prohibited list is used, a system error on getting prohibited list data MUST cause a prohibited list match and verification failure.</p>
+<p><strong>#POLICY.BLAKLIST.2:</strong> If a prohibited list is used, the prohibited list match MUST always cause a verification failure, no matter if the allowed list matches or not.</p>
+<p><strong>#POLICY.WHITELIST.1:</strong> If an allowed list is used, any error on getting allowed list data MUST cause verification failure.</p>
+<h3 id="environment">Environment </h3>
+<p><strong>#ENVIRONMENT.RUNTIME.1</strong>: The runtime module MUST be built with 4K alignment so that a Runtime image can be protected by the OS. (<a href="https://www.gitbook.com/book/edk2-docs/a-tour-beyond-bios-mitigate-buffer-overflow-in-ue/details" target="_blank">SecurityEnhancement</a>)</p>
+<p><strong>#ENVIRONMENT.UEFI.1</strong>: The boot module MAY be built with 4K alignment so that it can be protected by firmware.</p>
+<p><strong>#ENVIRONMENT.NX.1</strong>: The Code region SHOULD be set to ReadOnly (RO), and Data region SHOULD be set to NonExecutable (NX). (SecurityEnhancement)</p>
+<p><strong>#ENVIRONMENT.NX.2</strong>: The unallocated memory SHOULD be non-present or at least Non-Executable.</p>
+<p><strong>#ENVIRONMENT.STACK.1</strong>: Stack SHOULD be set to be NX. (SecurityEnhancement)</p>
+<p><strong>#ENVIRONMENT.STACK.2</strong>: Stack Guard SHOULD be enabled to catch stack overflow.</p>
+<p><strong>#ENVIRONMENT.HEAP.1</strong>: Heap SHOULD be set to be NX for data. [SecurityEnhancement]</p>
+<p><strong>#ENVIRONMENT.HEAP.2</strong>: A platform MAY use heap guard before release to check potential heap overflow.</p>
+<p><strong>#ENVIRONMENT.ASLR.1</strong>: A platform MAY enable Address Space Layout Randomization (ASLR). (SecurityEnhancement)</p>
+<p><strong>#ENVIRONMENT.ASLR.2</strong>: If ASLR is used, the platform MUST not expose any randomized information, such as a function address in a module, global data address, or the CPU architecture state address.</p>
+<p><strong>#ENVIRONMENT.ASLR.3</strong>: If ASLR is used, the platform MUST choose appropriate entropy. Too small of entropy may make ASLR not useful. Too much entropy may impact memory allocation in a resource-constrained environment.</p>
+<p><strong>#ENVIRONMENT.CONTROLFLOW.1</strong>: Control Flow Guard MAY be enabled to prevent Return Oriented Program (ROP), Call Oriented Program (COP)/Jump Oriented Program (JOP) attack. (<a href="https://github.com/tianocore/tianocore.github.io/wiki/CET-in-SMM" target="_blank">CET EDKII</a>)</p>
+<h3 id="crypto">Crypto </h3>
+<p><strong>#CRYPTO.1</strong>: A platform SHOULD NOT use any deprecated crypto-algorithm.</p>
+<p><strong>#CRYPTO.2</strong>: A platform SHOULD NOT implement its personally owned crypto algorithms or protocols.</p>
+<p><strong>#CRYPTO.3</strong>: A platform MUST follow cryptographic standards exactly.</p>
+<p><strong>#CRYPTO.HASH.1</strong>: A platform SHOULD use Secure Hash Algorithm (SHA) 256 equivalent or stronger.</p>
+<p><strong>#CRYPTO.HASH.2</strong>: A platform SHOULD NOT use SHA1 or Message Digest (MD) 4, MD5.</p>
+<p><strong>#CRYPTO.SYM.1</strong>: A platform SHOULD use Advanced Encryption Standard (AES) equivalent or stronger.</p>
+<p><strong>#CRYPTO.SYM.2</strong>: The key MUST NOT be saved in flash as plain text.</p>
+<p><strong>#CRYPTO.ASYM.1</strong>: A platform SHOULD use Rivest-Shamir-Adleman algorithm (RSA) or Elliptic curve cryptography (ECC) equivalent or stronger.</p>
+<p><strong>#CRYPTO.ASYM.2</strong>: The private key MUST NOT be saved in flash as plain text.</p>
+<p><strong>#CRYPTO.RANDOM.1</strong>: A platform SHOULD use an approved random number generator.</p>
+<h3 id="password">Password </h3>
+<p><strong>#PASSWORD.1</strong>: The password plaintext MUST NOT be saved to a variable. Alternative: 1) save SALT+HASH to a variable, 2) save to Hardware directly, 3) save to System Management RAM (SMRAM) for S3.</p>
+<p><strong>#PASSWORD.2</strong>: The password update MUST be in a secure environment, such as SMM, or before EndOfDxe.</p>
+<p><strong>#PASSWORD.3</strong>: The password in firmware MUST meet common password criteria (strength, update, algorithm, retry time, old password check, password lost, etc)</p>
+<p><strong>#PASSWORD.4</strong>: The password MAY be used to for authentication, (Entering setup page, setup variable access, WIFI PSK), for decryption (TLS private certificate)</p>
+<p><strong>#PASSWORD.5</strong>: The password in memory MUST be cleared after use. NOTE: The secrete MAY be in a global data region, stack or heap.</p>
+<p><strong>#PASSWORD.6</strong>: The password MUST NOT be hardcoded in the code.</p>
+<p><strong>#PASSWORD.7</strong>: If the code needs to compare the plain text password, the code MUST always compare all characters of the string, instead of breaking on the first mismatch.</p>
+<p><strong>#PASSWORD.8</strong>: Salt MUST be added to resist rainbow table attack.</p>
+<p><strong>#PASSWORD.9</strong>: Hash generation MUST add enough iteration to make sure the hash calculation is slow.</p>
+<h3 id="secret">Secret </h3>
+<p><strong>#SECRET.1</strong>: The secret MUST NOT be saved in a variable or disk directly as plain text. The secret includes but is not limited to the user password, hard drive password, Trusted Computing Group (TCG) OPAL password, or Trusted Platform Module (TPM) platform author value, network password, or private certificate password.</p>
+<p><strong>#SECRET.2</strong>: The secret in memory MUST be cleared after use, including usernames, passwords, keys, and other sensitive security information. NOTE: The secret MAY be in a global data region, stack or heap. The buffer content should be zeroed before released.</p>
+<p><strong>#SECRET.3</strong>: The secret MUST NOT be hardcoded in the code.</p>
+<p><strong>#SECRET.4</strong>: If the code needs to compare the secret, the code MUST always compare the entire data before completion.</p>
+<p><strong>#SECRET.5</strong>: The length of the secret MUST be large enough to resist a brute force attack.</p>
+<h3 id="network">Network </h3>
+<p><strong>#NETWORK.1</strong>: The network driver MUST always validate the packet from the network. Don&#x2019;t trust any length, size, offset field.</p>
+<p><strong>#NETWORK.2</strong>: Each layer if the network driver MUST validate its own header.</p>
+<p><strong>#NETWORK.TLS.1</strong>: The public cert MUST be stored in the UEFI authenticated variable or read-only region flash region.</p>
+<p><strong>#NETWORK.TLS.2</strong>: The private cert plain text MUST NOT be stored to readable flash region.</p>
+<p><strong>#NETWORK.WIFI.1</strong>: The WIFI password plain text MUST NOT be stored to readable flash region.</p>
+<h3 id="hardware">Hardware </h3>
+<p><strong>#HARDWARE.1</strong>: The untrusted input from hardware MUST be verified, such as Dual-Inline-Memory-Modules (DIMM) Serial Presence Detect (SPD) data, Universal Serial Bus (USB) descriptor, Bluetooth Low Energy (BLE) advisory information, etc.</p>
+<h3 id="dma">DMA </h3>
+<p><strong>#DMA.1</strong>: The device Direct Memory Access (DMA) MUST be disabled by default, either via Peripheral Component Interconnect (PCI) Bus Master Enable (BME) or Input/Output Memory Management Unit (IOMMU) engine. (<a href="https://firmware.intel.com/sites/default/files/Intel_WhitePaper_Using_IOMMU_for_DMA_Protection_in_UEFI.pdf" target="_blank">IOMMU EDK II</a>)</p>
+<p><strong>#DMA.2</strong>: The device DMA MUST be enabled if and only if it is requested to perform a transaction. After completing the transaction, the device DMA MUST be disabled.</p>
+<p><strong>#DMA.3</strong>: If an IOMMU engine is used for DMA protection, the IOMMU MUST cover all physical DRAM regions.</p>
+<p><strong>#DMA.4</strong>: The DMA capable region MUST have no overlap with any other existing code region or data region.</p>
+<p><strong>#DMA.5</strong>: The IOMMU engine SHOULD be configured for fine granularity control. The DMA capable region SHOULD be per device in the DXE phase.</p>
+<p><strong>#DMA.6</strong>: The DMA in a debug device in debug image MAY be enabled at all times.</p>
+<h3 id="other">Other </h3>
+<p><strong>#SIDECHANNEL.1:</strong> The high privilege code (SMM) MUST use SpeculationBarrier() after validation of untrusted data but before use to mitigate <a href="https://software.intel.com/security-software-guidance/software-guidance/bounds-check-bypass" target="_blank">Bounds Check Bypass</a>. (SideChannel)</p>
+<p><strong>#SIDECHANNEL.2:</strong> The high privilege code (SMM) MUST use StuffRsb before RSM to mitigate <a href="https://software.intel.com/security-software-guidance/software-guidance/branch-target-injection" target="_blank">Branch Target Injection</a>. (SideChannel)</p>
+<p><strong>#MDS.1:</strong> The high privilege code (SMM) MUST rendezvous all logical processors both on entry to and exit from SMM to ensure that a sibling logical processor does not reload data into microarchitectural structures after the automatic flush. (<a href="https://software.intel.com/security-software-guidance/insights/deep-dive-intel-analysis-microarchitectural-data-sampling" target="_blank">MDS</a>)</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Coding Guide</div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="executive_summary.html" class="navigation navigation-prev " aria-label="Previous page: Executive Summary">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="secure_coding_guidelines_boot_firmware.html" class="navigation navigation-next " aria-label="Next page: Secure Coding Guidelines: Boot Firmware">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Secure Coding Guidelines: General","level":"1.3","depth":1,"next":{"title":"Secure Coding Guidelines: Boot Firmware","level":"1.4","depth":1,"path":"secure_coding_guidelines_boot_firmware.md","ref":"secure_coding_guidelines_boot_firmware.md","articles":[]},"previous":{"title":"Executive Summary","level":"1.2","depth":1,"path":"executive_summary.md","ref":"executive_summary.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Coding Guide","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"secure_coding_guidelines_general.md","mtime":"2020-12-01T06:48:15.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:48:45.508Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
